@@ -3,7 +3,13 @@ import Image from "next/image";
 export default function PlanSteps() {
   return (
     <div className="flex flex-col items-center bg-white p-8">
-      <h2 className="text-4xl font-extrabold text-center mb-4"style={{ fontFamily: 'Poppins, sans-serif' }}>Cómo funciona tu plan</h2>
+      {/* Título principal con Poppins y font-semibold para un bold más suave */}
+      <h2
+        className="text-4xl font-semibold text-center mb-4"
+        style={{ fontFamily: 'Poppins, sans-serif' }}
+      >
+        Cómo funciona tu plan
+      </h2>
       
       {/* Imagen encima de los tres títulos */}
       <Image
@@ -18,7 +24,12 @@ export default function PlanSteps() {
       <div className="flex flex-col gap-12 text-black text-center sm:flex-row sm:justify-between">
         {/* Paso 1 */}
         <div className="flex flex-col items-center sm:items-center sm:w-1/3 max-w-xs mx-auto">
-          <h3 className="font-bold text-xl mb-3 tracking-wider text-center">Construye tu plan</h3>
+          <h3
+            className="font-semibold text-xl mb-3 tracking-wider text-center"
+            style={{ fontFamily: 'Poppins, sans-serif' }}
+          >
+            Construye tu plan
+          </h3>
           <p className="max-w-xs text-lg leading-relaxed tracking-wide text-center">
             Simplemente cuéntanos un poco sobre tu perro, y crearemos un plan con porciones personalizadas para satisfacer sus necesidades únicas de nutrición y calorías.
           </p>
@@ -26,7 +37,12 @@ export default function PlanSteps() {
 
         {/* Paso 2 */}
         <div className="flex flex-col items-center sm:items-center sm:w-1/3 max-w-xs mx-auto">
-          <h3 className="font-bold text-xl mb-3 tracking-wider text-center">Pruébalo</h3>
+          <h3
+            className="font-semibold text-xl mb-3 tracking-wider text-center"
+            style={{ fontFamily: 'Poppins, sans-serif' }}
+          >
+            Pruébalo
+          </h3>
           <p className="max-w-xs text-lg leading-relaxed tracking-wide text-center">
             Para comenzar, recibirás tu primera caja con hasta dos semanas de comida recién hecha, perfecta para que tu perro la pruebe.
           </p>
@@ -34,15 +50,23 @@ export default function PlanSteps() {
 
         {/* Paso 3 */}
         <div className="flex flex-col items-center sm:items-center sm:w-1/3 max-w-xs mx-auto">
-          <h3 className="font-bold text-xl mb-3 tracking-wider text-center">Enamórate</h3>
+          <h3
+            className="font-semibold text-xl mb-3 tracking-wider text-center"
+            style={{ fontFamily: 'Poppins, sans-serif' }}
+          >
+            Enamórate
+          </h3>
           <p className="max-w-xs text-lg leading-relaxed tracking-wide text-center">
             Si a ti y a tu perro les encanta –¡creemos que les gustará!–, estarás listo. Empezarás a recibir cajas de comida automáticamente cuando estés quedándote sin stock.
           </p>
         </div>
       </div>
 
-      {/* Botón */}
-      <button className="mt-12 px-5 py-4 bg-[#F2674B] text-white font-black text-xl tracking-tighter rounded-xl shadow-md">
+      {/* Botón con un bold menos marcado */}
+      <button
+        className="mt-12 px-7 py-4 bg-[#F2674B] text-white text-xl rounded-xl shadow-md"
+        style={{ fontFamily: 'Poppins, sans-serif' }}
+      >
         Construir mi plan
       </button>
     </div>

@@ -2,7 +2,8 @@ import { useState } from "react";
 import PlanSteps from "./components/PlanSteps";
 import Reviews from "./components/Reviews";
 import Footer from "./components/Footer";
-import CostumersSaying from "./components/CostumersSaying"
+import CostumersSaying from "./components/CostumersSaying";
+import FreshApproach from "./components/FreshApproach";
 
 
 // Componente de menú
@@ -38,6 +39,7 @@ export default function Home() {
       {/* Sección de PlanSteps */}
       <PlanSteps />
       <Reviews/>
+      <FreshApproach/>
       <CostumersSaying/>
       <Footer/>
     </div>

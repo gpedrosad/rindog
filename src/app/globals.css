@@ -33,3 +33,19 @@ body {
   height: 100%;
   object-fit: cover; /* Asegura que la imagen se ajuste dentro del círculo */
 }
+.diagonal-strikethrough {
+  position: relative;
+  display: inline-block;
+}
+
+.diagonal-strikethrough::after {
+  content: "";
+  position: absolute;
+  top: 47%;
+  left: 0%; /* Ajuste para acortar la línea en los extremos */
+  width: 100%; /* Ajusta el ancho para que no se extienda mucho más allá del texto */
+  height: 2px; /* Ajusta el grosor de la línea aquí */
+  background-color: #e63946; /* Color naranjo rojizo */
+  transform: rotate(-4deg); /* Ángulo de la línea */
+  transform-origin: center;
+}
