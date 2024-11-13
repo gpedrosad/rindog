@@ -3,7 +3,7 @@ import Image from "next/image";
 export default function PlanSteps() {
   return (
     <div className="flex flex-col items-center bg-white p-8">
-      <h2 className="text-3xl font-bold text-center mb-10 tracking-wide">Cómo funciona tu plan</h2>
+      <h2 className="text-4xl font-extrabold text-center mb-4"style={{ fontFamily: 'Poppins, sans-serif' }}>Cómo funciona tu plan</h2>
       
       {/* Imagen encima de los tres títulos */}
       <Image
