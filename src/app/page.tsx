@@ -1,5 +1,7 @@
 import { useState } from "react";
 import PlanSteps from "./components/PlanSteps";
+import Reviews from "./components/Reviews";
+
 
 // Componente de menú
 function Menu() {
@@ -33,6 +35,7 @@ export default function Home() {
 
       {/* Sección de PlanSteps */}
       <PlanSteps />
+      <Reviews/>
     </div>
   );
 }
