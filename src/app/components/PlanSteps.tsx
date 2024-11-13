@@ -1,8 +1,25 @@
+// src/app/components/PlanSteps.tsx
+"use client";
+
+import { useState } from "react";
 import Image from "next/image";
+import Confetti from "react-confetti";
+import { useWindowSize } from "react-use";
 
 export default function PlanSteps() {
+  const [showConfetti, setShowConfetti] = useState(false);
+  const { width, height } = useWindowSize();
+
+  const handleButtonClick = () => {
+    setShowConfetti(true);
+    setTimeout(() => setShowConfetti(false), 3000); // El confetti se muestra por 3 segundos
+  };
+
   return (
-    <div className="flex flex-col items-center bg-white p-8">
+    <div className="flex flex-col items-center bg-white p-8 relative">
+      {/* Confetti */}
+      {showConfetti && <Confetti width={width} height={height} />}
+
       {/* Título principal con Poppins y font-semibold para un bold más suave */}
       <h2
         className="text-4xl font-semibold text-center mb-4"
@@ -66,6 +83,7 @@ export default function PlanSteps() {
       <button
         className="mt-12 px-7 py-4 bg-[#F2674B] text-white text-xl rounded-xl shadow-md"
         style={{ fontFamily: 'Poppins, sans-serif' }}
+        onClick={handleButtonClick}
       >
         Construir mi plan
       </button>
