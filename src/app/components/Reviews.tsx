@@ -55,8 +55,11 @@ export default function Reviews() {
 
   return (
     <div className="flex flex-col items-center bg-[#FFF3E1] p-8 text-left sm:text-center space-y-4 overflow-hidden">
-      {/* Título */}
-      <h2 className="text-3xl font-bold text-[#173B33]">
+      {/* Título con Poppins extra bold */}
+      <h2
+        className="text-3xl font-extrabold text-[#173B33]"
+        style={{ fontFamily: "Poppins, sans-serif" }}
+      >
         {reviews[currentReview].title}
       </h2>
 

@@ -8,6 +8,7 @@ import DrivenByScience from "./components/DrivenByScience";
 import InstagramPost from "./components/InstagramPost";
 import ReviewCard from "./components/ReviewCard";
 import Hero from "./components/Hero";
+import Benefits from "./components/Benefits";
 
 
 // Componente de menú
@@ -46,6 +47,7 @@ export default function Home() {
       <Reviews/>
       <FreshApproach/>
       <DrivenByScience/>
+      <Benefits/>
       <CostumersSaying/>
       <InstagramPost/>
       <ReviewCard/>
