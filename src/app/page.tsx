@@ -46,8 +46,8 @@ export default function Home() {
       <PlanSteps />
       <Reviews/>
       <FreshApproach/>
-      <DrivenByScience/>
       <Benefits/>
+      <DrivenByScience/>
       <CostumersSaying/>
       <InstagramPost/>
       <ReviewCard/>
