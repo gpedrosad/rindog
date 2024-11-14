@@ -5,6 +5,7 @@ import Footer from "./components/Footer";
 import CostumersSaying from "./components/CostumersSaying";
 import FreshApproach from "./components/FreshApproach";
 import DrivenByScience from "./components/DrivenByScience";
+import InstagramPost from "./components/InstagramPost";
 
 
 // Componente de menú
@@ -43,6 +44,7 @@ export default function Home() {
       <FreshApproach/>
       <DrivenByScience/>
       <CostumersSaying/>
+      <InstagramPost/>
       <Footer/>
     </div>
   );
