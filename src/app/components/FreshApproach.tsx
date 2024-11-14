@@ -5,7 +5,7 @@ export default function FreshApproachAndBenefits() {
   return (
     <div className="relative">
       {/* Parte superior (Enfoque fresco para la comida de mascotas, en verde) */}
-      <div className="bg-[#173B33] text-white px-8 sm:px-16 pt-20 pb-80 space-y-8">
+      <div className="bg-[#173B33] text-white px-8 sm:px-16 pt-20 pb-72 lg:pb-96 space-y-8">
         <h2
           className="text-3xl sm:text-4xl font-extrabold text-center mb-4"
           style={{ fontFamily: "Poppins, sans-serif" }}
@@ -58,17 +58,18 @@ export default function FreshApproachAndBenefits() {
       </div>
 
       {/* Imagen centrada entre ambas secciones */}
-      <div className="absolute top-1/2 transform -translate-y-1/2 left-1/2 -translate-x-1/2">
+      <div className="absolute inset-x-0 top-1/1 transform -translate-y-1/2 flex justify-center">
         <Image
           src="/images/package.webp"
           alt="Paquete en el centro"
           width={400}
           height={400}
+          className="object-contain"
         />
       </div>
 
       {/* Parte inferior (Cómo hicimos la comida de mascotas saludable, en amarillo) */}
-      <div className="bg-[#FFF3E1] text-[#173B33] px-8 sm:px-16 pt-64 pb-40 flex flex-col items-center">
+      <div className="bg-[#FFF3E1] text-[#173B33] px-8 sm:px-16 pt-72 pb-20 flex flex-col items-center">
         <h2
           className="text-3xl sm:text-4xl font-extrabold text-center mb-8"
           style={{ fontFamily: "Poppins, sans-serif" }}

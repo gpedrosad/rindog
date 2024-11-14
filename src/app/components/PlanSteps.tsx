@@ -30,12 +30,12 @@ export default function PlanSteps() {
       
       {/* Imagen encima de los tres títulos */}
       <Image
-        src="/images/progress.gif"
-        alt="Progreso del plan"
-        width={0} // Se ajustará automáticamente al 3/4 de la pantalla
-        height={0} // La altura se ajustará automáticamente
-        className="w-3/4 mb-8"
-      />
+  src="/images/progress.gif"
+  alt="Progreso del plan"
+  width={0} // Se ajustará automáticamente al tamaño de pantalla
+  height={0} // La altura se ajustará automáticamente
+  className="w-3/4 lg:w-1/2 mb-8"
+/>
 
       {/* Contenedor de los pasos */}
       <div className="flex flex-col gap-12 text-black text-center sm:flex-row sm:justify-between">
