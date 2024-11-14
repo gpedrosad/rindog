@@ -10,6 +10,7 @@ import ReviewCard from "./components/ReviewCard";
 import Hero from "./components/Hero";
 import Benefits from "./components/Benefits";
 import EasierForYou from "./components/EasierForYou";
+import CreatePlanBanner from "./components/CreatePlanBanner";
 
 
 // Componente de menú
@@ -53,6 +54,7 @@ export default function Home() {
       <CostumersSaying/>
       <InstagramPost/>
       <ReviewCard/>
+      <CreatePlanBanner/>
       <Footer/>
     </div>
   );
