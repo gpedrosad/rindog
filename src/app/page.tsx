@@ -6,6 +6,8 @@ import CostumersSaying from "./components/CostumersSaying";
 import FreshApproach from "./components/FreshApproach";
 import DrivenByScience from "./components/DrivenByScience";
 import InstagramPost from "./components/InstagramPost";
+import ReviewCard from "./components/ReviewCard";
+import Hero from "./components/Hero";
 
 
 // Componente de menú
@@ -37,6 +39,7 @@ export default function Home() {
 
       {/* Menú */}
       <Menu />
+      <Hero/>
 
       {/* Sección de PlanSteps */}
       <PlanSteps />
@@ -45,6 +48,7 @@ export default function Home() {
       <DrivenByScience/>
       <CostumersSaying/>
       <InstagramPost/>
+      <ReviewCard/>
       <Footer/>
     </div>
   );
