@@ -4,6 +4,7 @@ import Reviews from "./components/Reviews";
 import Footer from "./components/Footer";
 import CostumersSaying from "./components/CostumersSaying";
 import FreshApproach from "./components/FreshApproach";
+import DrivenByScience from "./components/DrivenByScience";
 
 
 // Componente de menú
@@ -40,6 +41,7 @@ export default function Home() {
       <PlanSteps />
       <Reviews/>
       <FreshApproach/>
+      <DrivenByScience/>
       <CostumersSaying/>
       <Footer/>
     </div>
