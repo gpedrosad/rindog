@@ -9,6 +9,7 @@ import InstagramPost from "./components/InstagramPost";
 import ReviewCard from "./components/ReviewCard";
 import Hero from "./components/Hero";
 import Benefits from "./components/Benefits";
+import EasierForYou from "./components/EasierForYou";
 
 
 // Componente de menú
@@ -46,6 +47,7 @@ export default function Home() {
       <PlanSteps />
       <Reviews/>
       <FreshApproach/>
+      <EasierForYou/>
       <Benefits/>
       <DrivenByScience/>
       <CostumersSaying/>
