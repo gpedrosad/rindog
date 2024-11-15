@@ -12,12 +12,10 @@ export default function FreshApproachAndBenefits() {
         >
           Es momento de un enfoque fresco para la comida de mascotas.
         </h2>
-        <p className="text-center text-lg max-w-2xl mx-auto mb-10">
-          Al enviar comida directamente a ti, podemos invertir en mejores
-          ingredientes y comida más fresca. Calidad que nunca se encuentra en una
-          tienda.{" "}
+        <p className="text-center text-lg max-w-md mx-auto mb-10">
+          Enviamos comida fresca directamente a ti para ofrecer calidad y frescura sin precedentes.{" "}
           <a href="#" className="underline text-gray-300 hover:text-white">
-            Aprende más sobre la importancia de la comida real.
+            Aprende más aquí.
           </a>
         </p>
 
@@ -26,32 +24,32 @@ export default function FreshApproachAndBenefits() {
             <h3 className="text-2xl font-semibold mb-2 relative inline-block">
               <span className="diagonal-strikethrough">“Comidas”</span>
             </h3>
-            <p className="text-lg text-gray-300">
-              Polvos como “Comida de Pollo” pueden contener carne de animales enfermos.
+            <p className="text-lg text-gray-300 max-w-sm mx-auto">
+              Polvos como “Comida de Pollo” a menudo contienen carne de animales enfermos.
             </p>
           </div>
           <div>
             <h3 className="text-2xl font-semibold mb-2 relative inline-block">
               <span className="diagonal-strikethrough">Conservantes</span>
             </h3>
-            <p className="text-lg text-gray-300">
-              Conservantes naturales y/o artificiales pueden mantener alimentos de mascotas estables en el estante durante años.
+            <p className="text-lg text-gray-300 max-w-sm mx-auto">
+              Conservantes pueden mantener alimentos de mascotas estables en el estante durante años.
             </p>
           </div>
           <div>
             <h3 className="text-2xl font-semibold mb-2 relative inline-block">
               <span className="diagonal-strikethrough">Pellets Marrones</span>
             </h3>
-            <p className="text-lg text-gray-300">
-              Las croquetas están extremadamente procesadas, sin importar las afirmaciones o imágenes de ingredientes.
+            <p className="text-lg text-gray-300 max-w-sm mx-auto">
+              Las croquetas están altamente procesadas, sin importar las imágenes de ingredientes.
             </p>
           </div>
           <div>
             <h3 className="text-2xl font-semibold mb-2 relative inline-block">
               <span className="diagonal-strikethrough">Trucos de Etiqueta</span>
             </h3>
-            <p className="text-lg text-gray-300">
-              Los alimentos pueden ocultarse detrás de etiquetas engañosas. “Hecho con carne de res” puede significar solo un 3% de carne.
+            <p className="text-lg text-gray-300 max-w-sm mx-auto">
+              Etiquetas engañosas pueden significar solo un 3% de carne real.
             </p>
           </div>
         </div>
@@ -79,21 +77,36 @@ export default function FreshApproachAndBenefits() {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 text-center max-w-3xl">
           <div className="flex flex-col items-center">
-            <h3 className="text-2xl font-bold mb-4" style={{ fontFamily: 'Poppins, sans-serif' }}>Probado en Humanos</h3>
+            <h3
+              className="text-2xl font-bold mb-4"
+              style={{ fontFamily: "Poppins, sans-serif" }}
+            >
+              Probado en Humanos
+            </h3>
             <p className="text-gray-700">
               Comida de calidad humana en empaques amigables. Menos procesamiento, mayor seguridad y fácil de servir: ¡solo abre y vierte!
             </p>
           </div>
 
           <div className="flex flex-col items-center">
-            <h3 className="text-2xl font-bold mb-4" style={{ fontFamily: 'Poppins, sans-serif' }}>Planes Personalizados</h3>
+            <h3
+              className="text-2xl font-bold mb-4"
+              style={{ fontFamily: "Poppins, sans-serif" }}
+            >
+              Planes Personalizados
+            </h3>
             <p className="text-gray-700">
               Un plan diseñado por veterinarios se adapta a las necesidades individuales de tu perro. Las comidas se preparan y se porcionan según su perfil.
             </p>
           </div>
 
           <div className="flex flex-col items-center">
-            <h3 className="text-2xl font-bold mb-4" style={{ fontFamily: 'Poppins, sans-serif' }}>Entregado en Días</h3>
+            <h3
+              className="text-2xl font-bold mb-4"
+              style={{ fontFamily: "Poppins, sans-serif" }}
+            >
+              Entregado en Días
+            </h3>
             <p className="text-gray-700">
               Tu comida se hace fresca y se congela rápidamente para retener todos los nutrientes. Sin conservantes. Nunca almacenada por años.
             </p>
