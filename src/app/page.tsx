@@ -13,6 +13,7 @@ import EasierForYou from "./components/EasierForYou";
 import CreatePlanBanner from "./components/CreatePlanBanner";
 import MenuBar from "./components/MenuBar";
 import PromoBanner from "./components/PromoBanner"; // Importar el nuevo componente
+import Featuring from "./components/Featuring";
 
 export default function Home() {
   return (
@@ -27,6 +28,7 @@ export default function Home() {
       <div id="hero">
         <Hero />
       </div>
+      <Featuring/>
 
       {/* Sección de PlanSteps */}
       <PlanSteps />
