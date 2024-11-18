@@ -1,6 +1,6 @@
-
 "use client";
 
+import Image from "next/image"; // Asegúrate de importar el componente Image de Next.js
 import { useState } from "react";
 
 type Slide = {
@@ -23,12 +23,17 @@ const slides: Slide[] = [
   {
     id: 3,
     content: "Transforma la forma en que alimentas a tus mascotas con ingredientes reales.",
-    image: "/images/today.webp",
+    image: "/images/google.webp",
   },
   {
     id: 4,
     content: "La manera más elegante de garantizar el bienestar de tu perro.",
     image: "/images/vogue.webp",
+  },
+  {
+    id: 5,
+    content: "Alimentas a tus mascotas con ingredientes reales.",
+    image: "/images/today.webp",
   },
 ];
 
@@ -52,60 +57,79 @@ const Featuring = () => {
   };
 
   return (
-    <div className="relative w-full mx-auto h-[400px] bg-gray-50 rounded-lg shadow-lg overflow-hidden">
-      {/* Slides con transición */}
-      <div
-        className={`flex transition-transform duration-500 ease-in-out`}
-        style={{
-          transform: `translateX(-${currentSlide * 100}%)`,
-        }}
-      >
+    <div className="relative w-full mx-auto h-[400px] lg:h-[300px] bg-gray-50 rounded-lg shadow-lg overflow-hidden">
+      {/* Mostrar slides como carrusel en dispositivos móviles */}
+      <div className="flex lg:hidden">
+        <div
+          className={`flex transition-transform duration-500 ease-in-out`}
+          style={{
+            transform: `translateX(-${currentSlide * 100}%)`,
+          }}
+        >
+          {slides.map((slide) => (
+            <div
+              key={slide.id}
+              className="w-full h-full flex-shrink-0 flex flex-col items-center justify-center"
+            >
+              <Image
+                src={slide.image}
+                alt={slide.content}
+                width={160}
+                height={160}
+                className="pt-10"
+              />
+              <p className="text-gray-600 italic text-lg max-w-xl mx-auto text-center mt-4">
+                {slide.content}
+              </p>
+            </div>
+          ))}
+        </div>
+
+        {/* Botones de navegación */}
+        <button
+          onClick={prevSlide}
+          className="absolute top-1/2 left-4 transform -translate-y-1/2 text-gray-600 hover:text-gray-800 text-3xl p-3"
+        >
+          &#8249;
+        </button>
+        <button
+          onClick={nextSlide}
+          className="absolute top-1/2 right-4 transform -translate-y-1/2 text-gray-600 hover:text-gray-800 text-3xl p-3"
+        >
+          &#8250;
+        </button>
+
+        {/* Indicadores */}
+        <div className="absolute bottom-4 left-0 right-0 flex justify-center space-x-2">
+          {slides.map((_, index) => (
+            <button
+              key={index}
+              className={`w-3 h-3 rounded-full ${
+                currentSlide === index ? "bg-gray-800" : "bg-gray-300"
+              }`}
+              onClick={() => goToSlide(index)}
+            ></button>
+          ))}
+        </div>
+      </div>
+
+      {/* Mostrar imágenes y textos en fila para escritorio */}
+      <div className="hidden lg:flex justify-center items-center space-x-12 pl-10 pr-10 lg:mt-10">
         {slides.map((slide) => (
-          <div
-            key={slide.id}
-            className="w-full h-full flex-shrink-0 flex flex-col items-center justify-center"
-          >
-            <img
+          <div key={slide.id} className="flex flex-col items-center text-center space-y-2">
+            <Image
               src={slide.image}
-              alt={slide.content}
-              className="w-40 h-40 object-contain pt-10"
+              alt={`Slide ${slide.id}`}
+              width={160}
+              height={160}
+              className="object-contain mt-10"
             />
-            <p className="text-gray-600 italic text-lg max-w-xl mx-auto text-center mt-4">
-              {slide.content}
-            </p>
+            <p className="text-gray-600 italic text-sm max-w-sm">{slide.content}</p>
           </div>
         ))}
       </div>
-            {/* Botones de navegación */}
-            <button
-        onClick={prevSlide}
-        className="absolute top-1/2 left-4 transform -translate-y-1/2 text-gray-600 hover:text-gray-800 text-3xl p-3"
-      >
-        &#8249;
-      </button>
-      <button
-        onClick={nextSlide}
-        className="absolute top-1/2 right-4 transform -translate-y-1/2 text-gray-600 hover:text-gray-800 text-3xl p-3"
-      >
-        &#8250;
-      </button>
-
-      {/* Indicadores */}
-      {/* Indicadores */}
-<div className="absolute bottom-4 left-0 right-0 flex justify-center space-x-2">
-  {slides.map((_, index) => (
-    <button
-      key={index}
-      className={`w-3 h-3 rounded-full ${
-        currentSlide === index ? "bg-gray-800" : "bg-gray-300"
-      }`}
-      onClick={() => goToSlide(index)}
-    ></button>
-  ))}
-</div>
     </div>
   );
 };
 
 export default Featuring;
-
