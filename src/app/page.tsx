@@ -14,6 +14,7 @@ import CreatePlanBanner from "./components/CreatePlanBanner";
 import MenuBar from "./components/MenuBar";
 import PromoBanner from "./components/PromoBanner"; // Importar el nuevo componente
 import Featuring from "./components/Featuring";
+import Plate from "./components/Plate";
 
 export default function Home() {
   return (
@@ -33,6 +34,7 @@ export default function Home() {
       {/* Sección de PlanSteps */}
       <PlanSteps />
       <Reviews />
+      <Plate/>
       <FreshApproach />
       <EasierForYou />
       <Benefits />
