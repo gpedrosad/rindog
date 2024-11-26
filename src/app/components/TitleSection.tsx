@@ -13,7 +13,7 @@ const TitleSection: React.FC = () => {
       {/* Subtítulo */}
       <p className="text-lg text-gray-600 mb-8 text-center" style={{ fontFamily: "Roboto, sans-serif" }}>
         Al igual que tú, amamos a nuestras mascotas y nos preocupamos por su salud. Por eso creamos
-        The Farmer’s Dog: un servicio que entrega comida balanceada, hecha con recetas simples,
+        RinDog: un servicio que entrega comida balanceada, hecha con recetas simples,
         guiadas por la ciencia y motivadas por el amor.
       </p>
     </div>

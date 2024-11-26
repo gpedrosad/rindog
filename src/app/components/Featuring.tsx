@@ -57,13 +57,14 @@ const Featuring = () => {
   };
 
   return (
-    <div className="relative w-full mx-auto bg-gray-50 rounded-lg shadow-lg overflow-hidden">
+    <div
+      className="relative w-full mx-auto bg-gray-50 rounded-lg shadow-lg overflow-hidden flex items-center justify-center"
+      style={{ height: "450px" }} // Altura fija del componente
+    >
       {/* Mostrar slides como carrusel en dispositivos móviles */}
-      <div className="flex lg:hidden flex-col items-center p-4">
+      <div className="flex lg:hidden flex-col items-center justify-center w-full h-full">
         <div
-          className={`flex transition-transform duration-500 ease-in-out transform ${
-            direction === "left" ? "translate-x-full" : direction === "right" ? "-translate-x-full" : ""
-          }`}
+          className="flex transition-transform duration-500 ease-in-out w-full"
           style={{
             transform: `translateX(-${currentSlide * 100}%)`,
           }}
@@ -71,16 +72,16 @@ const Featuring = () => {
           {slides.map((slide) => (
             <div
               key={slide.id}
-              className="w-full h-full flex-shrink-0 flex flex-col items-center justify-center"
+              className="w-full h-full flex-shrink-0 flex flex-col items-center justify-center text-center px-8"
             >
               <Image
                 src={slide.image}
                 alt={slide.content}
                 width={160}
                 height={160}
-                className="pt-10"
+                className="mb-6"
               />
-              <p className="text-gray-600 italic text-lg max-w-xl mx-auto text-center mt-4">
+              <p className="text-gray-600 italic text-lg max-w-md mx-auto">
                 {slide.content}
               </p>
             </div>
@@ -116,17 +117,22 @@ const Featuring = () => {
       </div>
 
       {/* Mostrar imágenes y textos en fila para escritorio */}
-      <div className="hidden lg:flex justify-center items-center space-x-12 p-4">
+      <div className="hidden lg:flex justify-center items-center space-x-12 p-4 h-full">
         {slides.map((slide) => (
-          <div key={slide.id} className="flex flex-col items-center text-center space-y-2">
+          <div
+            key={slide.id}
+            className="flex flex-col items-center text-center space-y-4 px-8"
+          >
             <Image
               src={slide.image}
               alt={`Slide ${slide.id}`}
               width={160}
               height={160}
-              className="object-contain mt-10"
+              className="object-contain"
             />
-            <p className="text-gray-600 italic text-sm max-w-sm">{slide.content}</p>
+            <p className="text-gray-600 italic text-lg max-w-md mx-auto">
+              {slide.content}
+            </p>
           </div>
         ))}
       </div>
