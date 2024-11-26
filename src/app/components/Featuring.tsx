@@ -39,20 +39,16 @@ const slides: Slide[] = [
 
 const Featuring = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
-  const [direction, setDirection] = useState<"left" | "right">("right");
 
   const nextSlide = () => {
-    setDirection("right");
     setCurrentSlide((prev) => (prev + 1) % slides.length);
   };
 
   const prevSlide = () => {
-    setDirection("left");
     setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
   };
 
   const goToSlide = (index: number) => {
-    setDirection(index > currentSlide ? "right" : "left");
     setCurrentSlide(index);
   };
 
