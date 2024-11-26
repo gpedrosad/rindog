@@ -36,9 +36,9 @@ export default function Home() {
       <PlanSteps />
       <Reviews />
       <Plate/>
+      <Benefits />
       <FreshApproach />
       <EasierForYou />
-      <Benefits />
       <DrivenByScience />
       <CostumersSaying />
       <CreatePlanBanner />

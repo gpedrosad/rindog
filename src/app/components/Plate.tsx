@@ -1,5 +1,7 @@
 "use client";
+
 import React, { useEffect, useState, useRef } from "react";
+import Image from "next/image";
 
 const Plate: React.FC = () => {
   const [scrollProgress, setScrollProgress] = useState(0);
@@ -11,11 +13,9 @@ const Plate: React.FC = () => {
         const rect = containerRef.current.getBoundingClientRect();
         const viewportHeight = window.innerHeight;
 
-        // Definir el rango de activación
-        const startActivation = viewportHeight * 0.05; // Ajusta el inicio
-        const endActivation = viewportHeight * 0.4; // Ajusta el final
+        const startActivation = viewportHeight * 0.05;
+        const endActivation = viewportHeight * 0.4;
 
-        // Calcular el progreso solo dentro del rango
         if (rect.top < endActivation && rect.bottom > startActivation) {
           const progress = Math.min(
             1,
@@ -23,9 +23,9 @@ const Plate: React.FC = () => {
           );
           setScrollProgress(progress);
         } else if (rect.top >= endActivation) {
-          setScrollProgress(0); // Antes de entrar al rango
+          setScrollProgress(0);
         } else if (rect.bottom <= startActivation) {
-          setScrollProgress(1); // Después de salir del rango
+          setScrollProgress(1);
         }
       }
     };
@@ -35,27 +35,74 @@ const Plate: React.FC = () => {
   }, []);
 
   return (
-    <div
-      ref={containerRef}
-      className="relative w-full h-screen bg-white flex items-center justify-center overflow-hidden"
-    >
-      {/* Imagen Plate 2 */}
-      <img
-        src="images/plate2.webp"
-        alt="Plate 2"
-        className="absolute w-auto h-auto scale-50"
-      />
+    <div ref={containerRef} className="relative w-full h-screen bg-white flex items-center">
+      {/* Beneficios a la izquierda (solo en desktop) */}
+      <div className="hidden lg:flex flex-col items-end space-y-8 w-1/4 pr-6">
+        <div className="flex flex-col items-end text-right px-6">
+          <Image src="/images/fresh.webp" alt="Comida Real" width={50} height={50} className="mb-2" />
+          <h3 className="text-xl font-bold text-[#173B33] mb-2" style={{ fontFamily: "Poppins, sans-serif" }}>
+            Comida Real
+          </h3>
+          <p className="text-sm text-gray-600">
+            Carne y verduras de calidad humana en recetas simples, hechas para perros.
+          </p>
+        </div>
+        <div className="flex flex-col items-end text-right px-6">
+          <Image src="/images/human.webp" alt="Calidad Humana" width={50} height={50} className="mb-2" />
+          <h3 className="text-xl font-bold text-[#173B33] mb-2" style={{ fontFamily: "Poppins, sans-serif" }}>
+            Calidad Humana
+          </h3>
+          <p className="text-sm text-gray-600">
+            Seguridad y calidad nunca antes disponibles para mascotas.
+          </p>
+        </div>
+      </div>
 
-      {/* Imagen Plate 1 (tapa Plate 2) */}
-      <img
-        src="images/plate1.webp"
-        alt="Plate 1"
-        className="absolute w-auto h-auto scale-50"
-        style={{
-          clipPath: `polygon(0 0, ${100 - scrollProgress * 100}% 0, ${100 - scrollProgress * 100}% 100%, 0 100%)`,
-          transition: "clip-path 0.9s linear", // Transición suave
-        }}
-      />
+      {/* Imagen central */}
+      <div className="relative w-full lg:w-1/2 h-full flex items-center justify-center overflow-hidden">
+        <Image
+          src="/images/plate2.webp"
+          alt="Plate 2"
+          width={400}
+          height={400}
+          className="absolute"
+        />
+        <Image
+          src="/images/plate1.webp"
+          alt="Plate 1"
+          width={400}
+          height={400}
+          className="absolute"
+          style={{
+            clipPath: `polygon(0 0, ${100 - scrollProgress * 100}% 0, ${
+              100 - scrollProgress * 100
+            }% 100%, 0 100%)`,
+            transition: "clip-path 0.9s linear",
+          }}
+        />
+      </div>
+
+      {/* Beneficios a la derecha (solo en desktop) */}
+      <div className="hidden lg:flex flex-col items-start space-y-8 w-1/4 pl-6">
+        <div className="flex flex-col items-start text-left px-6">
+          <Image src="/images/fresh.webp" alt="Fresco" width={50} height={50} className="mb-2" />
+          <h3 className="text-xl font-bold text-[#173B33] mb-2" style={{ fontFamily: "Poppins, sans-serif" }}>
+            Fresco
+          </h3>
+          <p className="text-sm text-gray-600">
+            Mantiene la integridad nutricional de los alimentos.
+          </p>
+        </div>
+        <div className="flex flex-col items-start text-left px-6">
+          <Image src="/images/vet.webp" alt="Desarrollado por Veterinarios" width={50} height={50} className="mb-2" />
+          <h3 className="text-xl font-bold text-[#173B33] mb-2" style={{ fontFamily: "Poppins, sans-serif" }}>
+            Desarrollado por Veterinarios
+          </h3>
+          <p className="text-sm text-gray-600">
+            Nutrición que supera los estándares de la industria (AAFCO).
+          </p>
+        </div>
+      </div>
     </div>
   );
 };
