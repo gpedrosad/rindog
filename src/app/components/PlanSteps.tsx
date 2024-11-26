@@ -1,11 +1,8 @@
 "use client";
 
-import { useState } from "react";
 import Image from "next/image";
-import { useWindowSize } from "react-use";
-export default function PlanSteps() {
-  const { width, height } = useWindowSize();
 
+export default function PlanSteps() {
   return (
     <div className="flex flex-col items-center bg-white p-8 relative">
       {/* Título principal */}
@@ -24,16 +21,16 @@ export default function PlanSteps() {
           <Image
             src="/images/progress2.gif"
             alt="Progreso del plan en mobile"
-            width={0}
-            height={0}
-            className="w-[150px] h-[500px] sm:hidden mx-auto"
+            width={150}
+            height={500}
+            className="sm:hidden mx-auto"
           />
           {/* Imagen para desktop */}
           <Image
             src="/images/progress.gif"
             alt="Progreso del plan en desktop"
-            width={0}
-            height={0}
+            width={600}
+            height={600}
             className="hidden sm:block w-3/4 lg:w-1/2 mx-auto"
           />
         </div>

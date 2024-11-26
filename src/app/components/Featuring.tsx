@@ -61,7 +61,9 @@ const Featuring = () => {
       {/* Mostrar slides como carrusel en dispositivos móviles */}
       <div className="flex lg:hidden flex-col items-center p-4">
         <div
-          className={`flex transition-transform duration-500 ease-in-out`}
+          className={`flex transition-transform duration-500 ease-in-out transform ${
+            direction === "left" ? "translate-x-full" : direction === "right" ? "-translate-x-full" : ""
+          }`}
           style={{
             transform: `translateX(-${currentSlide * 100}%)`,
           }}
