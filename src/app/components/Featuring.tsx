@@ -1,13 +1,13 @@
 "use client";
 
-import Image from "next/image"; // Asegúrate de importar el componente Image de Next.js
 import { useState } from "react";
+import Image from "next/image";
 
-type Slide = {
+interface Slide {
   id: number;
   content: string;
   image: string; // Ruta del logo (imagen)
-};
+}
 
 const slides: Slide[] = [
   {
@@ -57,9 +57,9 @@ const Featuring = () => {
   };
 
   return (
-    <div className="relative w-full mx-auto h-[400px] lg:h-[300px] bg-gray-50 rounded-lg shadow-lg overflow-hidden">
+    <div className="relative w-full mx-auto bg-gray-50 rounded-lg shadow-lg overflow-hidden">
       {/* Mostrar slides como carrusel en dispositivos móviles */}
-      <div className="flex lg:hidden">
+      <div className="flex lg:hidden flex-col items-center p-4">
         <div
           className={`flex transition-transform duration-500 ease-in-out`}
           style={{
@@ -114,7 +114,7 @@ const Featuring = () => {
       </div>
 
       {/* Mostrar imágenes y textos en fila para escritorio */}
-      <div className="hidden lg:flex justify-center items-center space-x-12 pl-10 pr-10 lg:mt-10">
+      <div className="hidden lg:flex justify-center items-center space-x-12 p-4">
         {slides.map((slide) => (
           <div key={slide.id} className="flex flex-col items-center text-center space-y-2">
             <Image
