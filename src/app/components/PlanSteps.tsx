@@ -26,7 +26,7 @@ export default function PlanSteps() {
             alt="Progreso del plan en mobile"
             width={0}
             height={0}
-            className="w-[150px] h-[500px] sm:hidden mx-auto"
+            className="w-full h-full sm:hidden mx-auto mt-32"
           />
           {/* Imagen para desktop */}
           <Image
