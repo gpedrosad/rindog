@@ -16,6 +16,7 @@ import PromoBanner from "./components/PromoBanner"; // Importar el nuevo compone
 import Featuring from "./components/Featuring";
 import Plate from "./components/Plate";
 import Carousel from "./components/Carousel";
+import TitleSection from "./components/TitleSection";
 
 export default function Home() {
   return (
@@ -33,15 +34,16 @@ export default function Home() {
       <Featuring/>
 
       {/* Sección de PlanSteps */}
-      <PlanSteps />
-      <Reviews />
+      <TitleSection/>
       <Plate/>
       <Benefits />
       <FreshApproach />
       <EasierForYou />
+      <PlanSteps />
+      <Reviews />
       <DrivenByScience />
-      <CostumersSaying />
       <CreatePlanBanner />
+      <CostumersSaying />
       <Carousel/>
       <Footer />
     </div>

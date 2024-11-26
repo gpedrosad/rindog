@@ -21,7 +21,7 @@ export default function PlanSteps() {
 
       {/* Título principal */}
       <h2
-        className="text-4xl font-semibold text-center mb-10"
+        className="text-4xl font-semibold text-center mb-10 text-[#173B33]"
         style={{ fontFamily: "Poppins, sans-serif" }}
       >
         Cómo funciona tu plan
