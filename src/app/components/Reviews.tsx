@@ -77,7 +77,7 @@ export default function Reviews() {
       >
         {/* Reseña */}
         <p className="text-lg sm:italic max-w-2xl mx-auto text-gray-800 mt-4 px-4 h-40 sm:h-auto overflow-hidden sm:text-center">
-          "{reviews[currentReview].text}"
+          &quot;{reviews[currentReview].text}&quot;
         </p>
 
         {/* Autor y foto alineados a la izquierda en móvil */}
