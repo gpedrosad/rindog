@@ -15,6 +15,7 @@ import MenuBar from "./components/MenuBar";
 import PromoBanner from "./components/PromoBanner"; // Importar el nuevo componente
 import Featuring from "./components/Featuring";
 import Plate from "./components/Plate";
+import Carousel from "./components/Carousel";
 
 export default function Home() {
   return (
@@ -40,9 +41,8 @@ export default function Home() {
       <Benefits />
       <DrivenByScience />
       <CostumersSaying />
-      <InstagramPost />
-      <ReviewCard />
       <CreatePlanBanner />
+      <Carousel/>
       <Footer />
     </div>
   );
