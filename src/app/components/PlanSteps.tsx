@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import Confetti from "react-confetti";
 import { useWindowSize } from "react-use";
 
 export default function PlanSteps() {
@@ -17,7 +16,6 @@ export default function PlanSteps() {
   return (
     <div className="flex flex-col items-center bg-white p-8 relative">
       {/* Confetti */}
-      {showConfetti && <Confetti width={width} height={height} />}
 
       {/* Título principal */}
       <h2
