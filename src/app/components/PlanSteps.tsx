@@ -3,20 +3,11 @@
 import { useState } from "react";
 import Image from "next/image";
 import { useWindowSize } from "react-use";
-
 export default function PlanSteps() {
-  const [showConfetti, setShowConfetti] = useState(false);
   const { width, height } = useWindowSize();
-
-  const handleButtonClick = () => {
-    setShowConfetti(true);
-    setTimeout(() => setShowConfetti(false), 3000); // El confetti se muestra por 3 segundos
-  };
 
   return (
     <div className="flex flex-col items-center bg-white p-8 relative">
-      {/* Confetti */}
-
       {/* Título principal */}
       <h2
         className="text-4xl font-semibold text-center mb-10 text-[#173B33]"
@@ -26,7 +17,7 @@ export default function PlanSteps() {
       </h2>
 
       {/* Contenedor principal */}
-      <div className="grid grid-cols-6 gap-4 items-start sm:grid-cols-1 sm:gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-6 gap-4 items-start sm:grid-cols-1 sm:gap-4">
         {/* Imagen para mobile y desktop */}
         <div className="col-span-1 sm:col-span-full sm:mb-4">
           {/* Imagen para mobile */}
@@ -57,7 +48,7 @@ export default function PlanSteps() {
             >
               Construye tu plan
             </h3>
-            <p className="text-lg leading-relaxed tracking-wide">
+            <p className="text-lg leading-relaxed tracking-wide px-4 sm:px-0">
               Simplemente cuéntanos un poco sobre tu perro, y crearemos un plan
               con porciones personalizadas para satisfacer sus necesidades únicas
               de nutrición y calorías.
@@ -72,7 +63,7 @@ export default function PlanSteps() {
             >
               Pruébalo
             </h3>
-            <p className="text-lg leading-relaxed tracking-wide">
+            <p className="text-lg leading-relaxed tracking-wide px-4 sm:px-0">
               Para comenzar, recibirás tu primera caja con hasta dos semanas de
               comida recién hecha, perfecta para que tu perro la pruebe.
             </p>
@@ -86,7 +77,7 @@ export default function PlanSteps() {
             >
               Enamórate
             </h3>
-            <p className="text-lg leading-relaxed tracking-wide">
+            <p className="text-lg leading-relaxed tracking-wide px-4 sm:px-0">
               Si a ti y a tu perro les encanta –¡creemos que les gustará!–,
               estarás listo. Empezarás a recibir cajas de comida automáticamente
               cuando estés quedándote sin stock.
@@ -99,7 +90,6 @@ export default function PlanSteps() {
       <button
         className="mt-12 px-7 py-4 bg-[#F2674B] text-white text-xl rounded-xl shadow-md"
         style={{ fontFamily: "Poppins, sans-serif" }}
-        onClick={handleButtonClick}
       >
         Construir mi plan
       </button>
