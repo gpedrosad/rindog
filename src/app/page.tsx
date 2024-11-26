@@ -37,8 +37,8 @@ export default function Home() {
       <FreshApproach />
       <EasierForYou />
       <PlanSteps />
-      <Reviews />
       <DrivenByScience />
+      <Reviews />
       <CreatePlanBanner />
       <CostumersSaying />
       <Carousel/>
